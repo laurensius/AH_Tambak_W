@@ -191,9 +191,4 @@ class Rest extends CI_Controller {
 		);
 		echo json_encode($android,JSON_PRETTY_PRINT);
 	}
-
-	public function mqtt(){
-		$output = shell_exec('mosquitto_pub -m "hello dr php '. rand(0,10000) .'" -t "rnz"');
-		echo "<pre>$output</pre>";
-	}
 }
